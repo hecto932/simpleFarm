@@ -1,11 +1,11 @@
-sap.ui.jsview("report.report", {
+sap.ui.jsview("report.views.galpon", {
 
 	/** Specifies the Controller belonging to this View. 
 	* In the case that it is not implemented, or that "null" is returned, this View does not have a Controller.
-	* @memberOf report.report
+	* @memberOf report.galpon
 	*/ 
 	getControllerName : function() {
-		return "report.report";
+		return "report.controllers.galpon";
 	},
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
@@ -13,20 +13,13 @@ sap.ui.jsview("report.report", {
 	* @memberOf report.report
 	*/ 
 	createContent : function(oController) {
-		console.log()
-		
-		var StandardTile = new sap.m.StandardTile({
-			icon: "sap-icon://{icon}",
-			number: "{number}",
-			numberUnit: "{numberUnit}",
-			title: "{title}",
-			info: "{info}"
-		})
-		
-		var TileContainer = new sap.m.TileContainer("tilecontainer",{
+
+		var TileContainer = new sap.m.TileContainer("tilecontainer2",{
 			width: "100%"
 		})
 		
+		//Define a Factory Method for StandardTile elements
+		//Bind all properties
 		var standardTileFactory = function(sId, oContext){
 			var oTile = new sap.m.StandardTile(sId)
 			.bindProperty("title",oContext.sPath+"/title")
@@ -34,19 +27,28 @@ sap.ui.jsview("report.report", {
     		.bindProperty("number",oContext.sPath+"/number")
     		.bindProperty("numberUnit",oContext.sPath+"/numberUnit")
     		.bindProperty("icon",oContext.sPath+"/icon")
-   
-			return oTile;
+    		.attachPress(oController.handlePress)
+    		.addCustomData(new sap.ui.core.CustomData({
+        		key: "modelId",	
+        		value: oContext.oModel.getProperty(oContext.sPath+"/id"),
+        		writeToDom: true
+			}))
+
+			return oTile
 		}
 		
-		TileContainer.bindAggregation("tiles", "/FarmCollection",standardTileFactory)
-			
+		TileContainer.bindAggregation("tiles", "/galpones",standardTileFactory)
+
  		return new sap.m.Page({
-			title: "Daily report",
+			title: "{/title}",
 			enableScrolling: false,
 			content: [
-			          TileContainer
-			]
+				TileContainer
+			],
+			showNavButton: true,
+   			navButtonPress:  function () {  
+          		oController.goBack() 
+      		}
 		});
 	}
-
 });
