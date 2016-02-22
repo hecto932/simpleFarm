@@ -10,15 +10,43 @@
 			"id": "1",
 			"icon": "sap-icon://factory",
 			"number": "1",
-			"numberUnit": "Galpón",
-			"title": "Pollos de raza",
+			"numberUnit": "G1001",
+			"title": "Chicken type 1",
 			"info": "Infomation"
 		}, {
 			"id": "2",
 			"icon": "sap-icon://factory",
 			"number": "2",
-			"numberUnit": "Galpón",
-			"title": "Pollos chimbos",
+			"numberUnit": "G1002",
+			"title": "Chicken type 2",
+			"info": "Information"
+		}, {
+			"id": "3",
+			"icon": "sap-icon://factory",
+			"number": "3",
+			"numberUnit": "G1003",
+			"title": "Chicken type 3",
+			"info": "Infomation"
+		}, {
+			"id": "4",
+			"icon": "sap-icon://factory",
+			"number": "4",
+			"numberUnit": "G1004",
+			"title": "Chicken type 4",
+			"info": "Information"
+		}, {
+			"id": "5",
+			"icon": "sap-icon://factory",
+			"number": "5",
+			"numberUnit": "G1005",
+			"title": "Chicken type 5",
+			"info": "Infomation"
+		}, {
+			"id": "6",
+			"icon": "sap-icon://factory",
+			"number": "6",
+			"numberUnit": "G1006",
+			"title": "Chicken type 6",
 			"info": "Information"
 		}]
 	}, {
@@ -27,14 +55,100 @@
 		"number": "2",
 		"numberUnit": "Farm",
 		"title": "Medellín",
-		"info": "This is a info's example"
+		"info": "This is a info's example",
+		"galpones": [{
+			"id": "1",
+			"icon": "sap-icon://factory",
+			"number": "1",
+			"numberUnit": "G2001",
+			"title": "Chicken type 1",
+			"info": "Infomation"
+		}, {
+			"id": "2",
+			"icon": "sap-icon://factory",
+			"number": "2",
+			"numberUnit": "G2002",
+			"title": "Chicken type 2",
+			"info": "Information"
+		}, {
+			"id": "3",
+			"icon": "sap-icon://factory",
+			"number": "3",
+			"numberUnit": "G2003",
+			"title": "Chicken type 3",
+			"info": "Infomation"
+		}, {
+			"id": "4",
+			"icon": "sap-icon://factory",
+			"number": "4",
+			"numberUnit": "G2004",
+			"title": "Chicken type 4",
+			"info": "Information"
+		}, {
+			"id": "5",
+			"icon": "sap-icon://factory",
+			"number": "5",
+			"numberUnit": "G2005",
+			"title": "Chicken type 5",
+			"info": "Infomation"
+		}, {
+			"id": "6",
+			"icon": "sap-icon://factory",
+			"number": "6",
+			"numberUnit": "G2006",
+			"title": "Chicken type 6",
+			"info": "Information"
+		}]
 	}, {
 		"id": "3",
 		"icon": "sap-icon://machine",
 		"number": "3",
 		"numberUnit": "Farm",
 		"title": "Cali",
-		"info": "This is a info's example"
+		"info": "This is a info's example",
+		"galpones": [{
+			"id": "1",
+			"icon": "sap-icon://factory",
+			"number": "1",
+			"numberUnit": "G3001",
+			"title": "Chicken type 1",
+			"info": "Infomation"
+		}, {
+			"id": "2",
+			"icon": "sap-icon://factory",
+			"number": "2",
+			"numberUnit": "G3002",
+			"title": "Chicken type 2",
+			"info": "Information"
+		}, {
+			"id": "3",
+			"icon": "sap-icon://factory",
+			"number": "3",
+			"numberUnit": "G3003",
+			"title": "Chicken type 3",
+			"info": "Infomation"
+		}, {
+			"id": "4",
+			"icon": "sap-icon://factory",
+			"number": "4",
+			"numberUnit": "G3004",
+			"title": "Chicken type 4",
+			"info": "Information"
+		}, {
+			"id": "5",
+			"icon": "sap-icon://factory",
+			"number": "5",
+			"numberUnit": "G3005",
+			"title": "Chicken type 5",
+			"info": "Infomation"
+		}, {
+			"id": "6",
+			"icon": "sap-icon://factory",
+			"number": "6",
+			"numberUnit": "G3006",
+			"title": "Chicken type 6",
+			"info": "Information"
+		}]
 	}, {
 		"id": "4",
 		"icon": "sap-icon://machine",

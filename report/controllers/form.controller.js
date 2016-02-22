@@ -1,4 +1,4 @@
-sap.ui.controller("report.controllers.galpon", {
+sap.ui.controller("report.controllers.form", {
 
 	goBack: function(){
 		app.back()
@@ -13,33 +13,18 @@ sap.ui.controller("report.controllers.galpon", {
 	onInit: function(oEvent) {
   		this.getView().addDelegate({
    			onBeforeShow : function(evt) {
-
-   				/*
     			evt.to.setModel(evt.data.oModel);
     			evt.to.setBindingContext(evt.data);
-    
+    			evt.to.getModel().setProperty("/galpon", evt.to.getModel().getProperty(evt.data.sPath + "/title"))
+    			evt.to.getModel().setProperty("/galponNumber", evt.to.getModel().getProperty(evt.data.sPath + "/number"))
+    			evt.to.getModel().setProperty("/galponLote", evt.to.getModel().getProperty(evt.data.sPath + "/numberUnit"))
+    			//console.log(evt.data)
     			//De esta manera puedo saber que objeto está recibiendo la aplicación.
     			console.log(evt.to.getModel());
-				*/
-
-    			evt.to.setBindingContext(evt.data)
-		      	var oModel2 = new sap.ui.model.json.JSONModel()
-		      	oModel2.setData(evt.to.getBindingContext().getObject())
-		      	//evt.to.setModel(evt.data.oModel);
-		      	evt.to.setModel(oModel2)
-
-		      	console.log(evt.to.getModel())
+				
    			}
  	 	})
- 	},
-
- 	handlePress: function (oControlEvent){
- 		var context = oControlEvent.getSource().getBindingContext().getObject();
-		var bindingContext = oControlEvent.getSource().getBindingContext();
-		console.log("bindingContext para Form")
-		console.log(bindingContext.sPath)
-		app.to("form", bindingContext);
-   	}
+ 	}
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

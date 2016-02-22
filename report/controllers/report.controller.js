@@ -14,7 +14,6 @@ sap.ui.controller("report.controllers.report", {
 	handlePress: function (oControlEvent){
         var context = oControlEvent.getSource().getBindingContext().getObject();
 		var bindingContext = oControlEvent.getSource().getBindingContext();
-		  
 		app.to("galpones", bindingContext);
    	}
 
