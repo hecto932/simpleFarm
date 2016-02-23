@@ -14,6 +14,8 @@ sap.ui.jsview("report.views.form", {
 	*/ 
 	createContent : function(oController) {
 
+		var CurrentDate = new Date()
+
 		var simpleForm = new sap.ui.layout.form.SimpleForm({
 			editable: true,
 			maxContainerCols: 2,
@@ -27,34 +29,39 @@ sap.ui.jsview("report.views.form", {
 				new sap.ui.core.Title({ text: "Data" }),
 
 				new sap.m.Label({ design: "Bold", text: "Farm" }),
-				new sap.m.Input({ enabled: false, value: "{/title}"}),
+				new sap.m.Input("_farm", { enabled: false, value: "{/title}"}),
 
-				new sap.m.Label({ design: "Bold", text: "Galpón"}),
-				new sap.m.Input({ enabled: false, value: "{/galponNumber}"}),
+				new sap.m.Label({ design: "Bold", text: "Shed"}),
+				new sap.m.Input("_shed", { enabled: false, value: "{/galponNumber}"}),
 
 				new sap.m.Label({ design: "Bold", text: "Lot"}),
-				new sap.m.Input({ enabled: false, value: "{/galponLote}" }),
+				new sap.m.Input("_lot", { enabled: false, value: "{/galponLote}" }),
 
 				new sap.m.Label({ design: "Bold", text: "Day"}),
-				new sap.m.DatePicker({ enabled: true, format: "dd-mm-yyyy", placeholder: "dd-mm-yyyy" }),
+				new sap.m.DatePicker("_date", { enabled: true, format: "dd-mm-yyyy", placeholder: "dd-mm-yyyy", dateValue: CurrentDate}),
 
 				new sap.m.Label({ design: "Bold", text: "Age"}),
-				new sap.m.Input({ type: sap.m.InputType.Number, placeholder: "Expressed in days..."}),
+				new sap.m.Input("_age", { type: sap.m.InputType.Number, placeholder: "Expressed in days..."}),
 
 				new sap.m.Label({ design: "Bold", text: "Mortality"}),
-				new sap.m.Input({ type: sap.m.InputType.Number, placeholder: "Number..."}),
+				new sap.m.Input("_mortality", { type: sap.m.InputType.Number, placeholder: "Number..."}),
 
 				new sap.m.Label({ design: "Bold", text: "Discard"}),
-				new sap.m.Input({ type: sap.m.InputType.Number, placeholder: "Number..."}),
+				new sap.m.Input("_discard", { type: sap.m.InputType.Number, placeholder: "Number..."}),
 
 				new sap.m.Label({ design: "Bold", text: "Consumption"}),
-				new sap.m.Input({ type: sap.m.InputType.Number, placeholder: "Expressed in lumps..." }),
+				new sap.m.Input("_consumption", { type: sap.m.InputType.Number, placeholder: "Expressed in lumps..." }),
 
 				new sap.m.Label(),
 				new sap.m.FlexBox({
 					justifyContent: "Center",
 					items: [
-						new sap.m.Button({ text: "Generate", type: "Accept", Align: "Center" })
+						new sap.m.Button({ 
+							text: "Generate", 
+							type: "Accept", 
+							Align: "Center", 
+							press: oController.BtnGenerate 
+						})
 					]
 				})
 			]

@@ -28,7 +28,7 @@ sap.ui.controller("report.controllers.galpon", {
 		      	//evt.to.setModel(evt.data.oModel);
 		      	evt.to.setModel(oModel2)
 
-		      	console.log(evt.to.getModel())
+		      	//console.log(evt.to.getModel())
    			}
  	 	})
  	},
@@ -36,8 +36,8 @@ sap.ui.controller("report.controllers.galpon", {
  	handlePress: function (oControlEvent){
  		var context = oControlEvent.getSource().getBindingContext().getObject();
 		var bindingContext = oControlEvent.getSource().getBindingContext();
-		console.log("bindingContext para Form")
-		console.log(bindingContext.sPath)
+		//console.log("bindingContext para Form")
+		//console.log(bindingContext.sPath)
 		app.to("form", bindingContext);
    	}
 

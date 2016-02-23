@@ -1,6 +1,10 @@
 sap.ui.controller("report.controllers.form", {
 
 	goBack: function(){
+        sap.ui.getCore().getElementById("_age").setValue("");
+        sap.ui.getCore().getElementById("_mortality").setValue("");
+        sap.ui.getCore().getElementById("_discard").setValue("");
+        sap.ui.getCore().getElementById("_consumption").setValue("");
 		app.back()
 	},
 
@@ -20,11 +24,21 @@ sap.ui.controller("report.controllers.form", {
     			evt.to.getModel().setProperty("/galponLote", evt.to.getModel().getProperty(evt.data.sPath + "/numberUnit"))
     			//console.log(evt.data)
     			//De esta manera puedo saber que objeto está recibiendo la aplicación.
-    			console.log(evt.to.getModel());
+    			//console.log(evt.to.getModel());
 				
    			}
  	 	})
- 	}
+
+        //SETTING i18n
+
+ 	},
+    BtnGenerate : function(oEvent) {
+        sap.ui.getCore().getElementById("_age").setValue("");
+        sap.ui.getCore().getElementById("_mortality").setValue("");
+        sap.ui.getCore().getElementById("_discard").setValue("");
+        sap.ui.getCore().getElementById("_consumption").setValue("");
+        app.back()
+    }
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

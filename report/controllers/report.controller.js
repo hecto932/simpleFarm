@@ -9,6 +9,8 @@ sap.ui.controller("report.controllers.report", {
 		var sPath =  jQuery.sap.getModulePath("report.models", "/farm.json")
 		var oModel = new sap.ui.model.json.JSONModel(sPath)
 		this.getView().setModel(oModel)
+
+		
 	},
 
 	handlePress: function (oControlEvent){
