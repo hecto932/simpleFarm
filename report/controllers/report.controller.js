@@ -9,10 +9,13 @@ sap.ui.controller("report.controllers.report", {
 		var sPath =  jQuery.sap.getModulePath("report.models", "/farm.json")
 		var oModel = new sap.ui.model.json.JSONModel(sPath)
 		this.getView().setModel(oModel)
-
 		
+		// set i18n model on view
+         var i18nModel = new sap.ui.model.resource.ResourceModel({
+            bundleName: "report.i18n.i18n"
+         });
+         this.getView().setModel(i18nModel, "i18n");
 	},
-
 	handlePress: function (oControlEvent){
         var context = oControlEvent.getSource().getBindingContext().getObject();
 		var bindingContext = oControlEvent.getSource().getBindingContext();

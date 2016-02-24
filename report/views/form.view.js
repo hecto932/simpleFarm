@@ -26,31 +26,31 @@ sap.ui.jsview("report.views.form", {
      		columnsL: 4, 
      		columnsM: 4,
 			content: [
-				new sap.ui.core.Title({ text: "Data" }),
+				new sap.ui.core.Title({ text: "{i18n>form_subtitle}" }),
 
-				new sap.m.Label({ design: "Bold", text: "Farm" }),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_farm}" }),
 				new sap.m.Input("_farm", { enabled: false, value: "{/title}"}),
 
-				new sap.m.Label({ design: "Bold", text: "Shed"}),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_shed}"}),
 				new sap.m.Input("_shed", { enabled: false, value: "{/galponNumber}"}),
 
-				new sap.m.Label({ design: "Bold", text: "Lot"}),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_lot}"}),
 				new sap.m.Input("_lot", { enabled: false, value: "{/galponLote}" }),
 
-				new sap.m.Label({ design: "Bold", text: "Day"}),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_day}"}),
 				new sap.m.DatePicker("_date", { enabled: true, format: "dd-mm-yyyy", placeholder: "dd-mm-yyyy", dateValue: CurrentDate}),
 
-				new sap.m.Label({ design: "Bold", text: "Age"}),
-				new sap.m.Input("_age", { type: sap.m.InputType.Number, placeholder: "Expressed in days..."}),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_age}"}),
+				new sap.m.Input("_age", { type: sap.m.InputType.Number, placeholder: "{i18n>ph_day}"}),
 
-				new sap.m.Label({ design: "Bold", text: "Mortality"}),
-				new sap.m.Input("_mortality", { type: sap.m.InputType.Number, placeholder: "Number..."}),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_mortality}"}),
+				new sap.m.Input("_mortality", { type: sap.m.InputType.Number, placeholder: "{i18n>ph_mortality}"}),
 
-				new sap.m.Label({ design: "Bold", text: "Discard"}),
-				new sap.m.Input("_discard", { type: sap.m.InputType.Number, placeholder: "Number..."}),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_discard}"}),
+				new sap.m.Input("_discard", { type: sap.m.InputType.Number, placeholder: "{i18n>ph_discard}"}),
 
-				new sap.m.Label({ design: "Bold", text: "Consumption"}),
-				new sap.m.Input("_consumption", { type: sap.m.InputType.Number, placeholder: "Expressed in lumps..." }),
+				new sap.m.Label({ design: "Bold", text: "{i18n>label_consumption}"}),
+				new sap.m.Input("_consumption", { type: sap.m.InputType.Number, placeholder: "{i18n>ph_consumption}" }),
 
 				new sap.m.Label(),
 				new sap.m.FlexBox({
@@ -68,7 +68,7 @@ sap.ui.jsview("report.views.form", {
 		})
 
  		return new sap.m.Page({
-			title: "Report form",
+			title: "{i18n>form_title}",
 			content: [
 				simpleForm
 			],

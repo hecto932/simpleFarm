@@ -29,7 +29,11 @@ sap.ui.controller("report.controllers.form", {
    			}
  	 	})
 
-        //SETTING i18n
+        // set i18n model on view
+         var i18nModel = new sap.ui.model.resource.ResourceModel({
+            bundleName: "report.i18n.i18n"
+         });
+         this.getView().setModel(i18nModel, "i18n");
 
  	},
     BtnGenerate : function(oEvent) {

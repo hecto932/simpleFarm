@@ -40,7 +40,7 @@ sap.ui.jsview("report.views.report", {
 		TileContainer.bindAggregation("tiles", "/FarmCollection",standardTileFactory)
 
  		return new sap.m.Page({
-			title: "{/i18n>report_title}",
+			title: "{i18n>report_title}",
 			enableScrolling: false,
 			content: [
 			          TileContainer
