@@ -2,7 +2,6 @@
     "application": {
         "id": "",
         "title": "simpleFarm",
-        "description": "simple farm",
         "type": "SAP_UI5_Component",
         "componentUrl": "/",
         "appUrl": "#simpleFarm-Display",
@@ -23,10 +22,10 @@
     },
     "tile": {
         "type": "StaticTile",
-        "title": "Simple Farm",
-        "subtitle": "Reportes",
-        "searchKeywords": "Simple Farm,Reportes",
-        "displayIconUrl": "sap-icon://activity-2",
+        "title": "Title",
+        "subtitle": "Subtitle",
+        "searchKeywords": "Title,Subtitle",
+        "displayIconUrl": "sap-icon://approvals",
         "displayInfoText": "",
         "size": "1x1",
         "serviceURL": "",
