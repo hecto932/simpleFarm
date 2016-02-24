@@ -20,9 +20,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_bluecrystal"
-		]
+		"supportedThemes": ["sap_bluecrystal"]
 	},
 	"sap.ui5": {
 		"_version": "1.1.0",
@@ -45,6 +43,14 @@
 					"bundleName": "report.i18n.i18n"
 				}
 			}
+		},
+		"contentDensities": {
+			"compact": false,
+			"cozy": false
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "",
+		"_version": "1.1.0"
 	}
 }
